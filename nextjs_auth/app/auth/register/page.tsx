@@ -6,8 +6,9 @@ import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import { RegisterSchema } from "@/schemas";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Form, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import {
+  Form,
   FormField,
   FormItem,
   FormLabel,
