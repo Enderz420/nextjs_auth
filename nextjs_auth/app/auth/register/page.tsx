@@ -24,6 +24,7 @@ export default function Register() {
   const form = useForm({
     resolver: zodResolver(RegisterSchema),
     defaultValues: {
+      username: "",
       email: "",
       password: "",
     },
@@ -46,6 +47,28 @@ export default function Register() {
         <CardContent>
           <Form {...form}>
             <form className="space-y-6" onSubmit={form.handleSubmit(onSubmit)}>
+              <div className="flex flex-col space-y-1.5">
+                <FormField
+                  control={form.control}
+                  name="username"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Username</FormLabel>
+                      <FormControl>
+                        <Input
+                          {...field}
+                          disabled={isPending}
+                          type="text"
+                          placeholder="Username"
+                          id="username"
+                          className="text-black"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
               <div className="flex flex-col space-y-1.5">
                 <FormField
                   control={form.control}

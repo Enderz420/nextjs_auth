@@ -8,6 +8,9 @@ export const LoginSchema = z.object({
 });
 
 export const RegisterSchema = z.object({
+  username: z.string().min(1, {
+    message: "Username cannot be empty",
+  }),
   email: z.string().email(),
   password: z.string().min(6, {
     message: "Password must be 6 characters or more",
