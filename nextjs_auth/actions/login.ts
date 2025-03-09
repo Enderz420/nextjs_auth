@@ -1,11 +1,9 @@
 "use server";
 
 import { LoginSchema } from "@/schemas";
-import { LoginFormValues, LoginResponse } from "@/types";
+import { LoginFormValues, AuthResponse } from "@/types";
 
-export const login = async (
-  values: LoginFormValues
-): Promise<LoginResponse> => {
+export const login = async (values: LoginFormValues): Promise<AuthResponse> => {
   const validatedFields = LoginSchema.safeParse(values);
 
   if (!validatedFields.success) {
