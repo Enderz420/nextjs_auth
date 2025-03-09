@@ -4,12 +4,7 @@ import { z } from "zod";
 export type LoginFormValues = z.infer<typeof LoginSchema>;
 export type RegisterFormValues = z.infer<typeof RegisterSchema>;
 
-export interface LoginResponse {
-  error: string | null;
-  success: string | null;
-}
-
-export interface RegisterResponse {
+export interface AuthResponse {
   error: string | null;
   success: string | null;
 }

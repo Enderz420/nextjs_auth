@@ -1,11 +1,11 @@
 "use server";
 
 import { RegisterSchema } from "@/schemas";
-import { RegisterFormValues, RegisterResponse } from "@/types";
+import { RegisterFormValues, AuthResponse } from "@/types";
 
 export const signup = async (
   values: RegisterFormValues
-): Promise<RegisterResponse> => {
+): Promise<AuthResponse> => {
   const validatedFields = RegisterSchema.safeParse(values);
 
   if (!validatedFields.success) {
