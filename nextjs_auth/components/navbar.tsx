@@ -4,9 +4,9 @@ import { Button } from "./ui/button";
 
 function Navbar() {
   return (
-    <header className="bg-slate-700 text-white p-2">
-      <nav>
-        <div className="flex">
+    <header className="bg-slate-700 text-white">
+      <nav className="flex justify-evenly w-screen py-2">
+        <div>
           <Link className="mx-2 outline-gray-500" href="/">
             <Button variant="default" className="text-white">
               Home
