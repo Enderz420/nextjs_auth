@@ -34,3 +34,6 @@ info - Need to disable some ESLint rules? Learn more here: https://nextjs.org/do
 
 23:54
 nei, nei nei nei nei nei nei nei nei nei
+
+00:03
+![levert sent](/public/image.png)
