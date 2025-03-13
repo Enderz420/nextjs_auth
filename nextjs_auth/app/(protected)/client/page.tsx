@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
-import { signOut, useSession } from "next-auth/react";
-import { Button } from "@/components/ui/button";
+import { useSession } from "next-auth/react";
 
 export default function Server() {
   const { data: session, status } = useSession();
@@ -11,15 +10,6 @@ export default function Server() {
         {JSON.stringify(session, null, 2)}
         <p>Status: {status}</p>
         <p>secret!!!! hemmelig klient dashboard</p>
-        <form
-          action={async () => {
-            "use server";
-
-            await signOut();
-          }}
-        >
-          <Button>Logout</Button>
-        </form>
       </div>
     </main>
   );
